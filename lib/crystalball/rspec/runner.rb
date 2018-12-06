@@ -17,7 +17,14 @@ module Crystalball
 
           prediction = build_prediction
           # Don't actually run the specs, just print the prediction
-          puts prediction.compact
+          puts 'Making runfile.'
+          make_booster_file(prediction.compact)
+        end
+
+        def make_booster_file(prediction)
+          output = ""
+          prediction.each { |file| output += "#{file} " }
+          File.open('tmp/crystal_files.txt', 'w') { |f| f.write(output) }
         end
 
         def reset!
