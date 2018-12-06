@@ -15,13 +15,9 @@ module Crystalball
         def run(args, err = $stderr, out = $stdout)
           return config['runner_class'].run(args, err, out) unless config['runner_class'] == self
 
-          Crystalball.log :info, "Crystalball starts to glow..."
           prediction = build_prediction
-
-          Crystalball.log :debug, "Prediction: #{prediction.first(5).join(' ')}#{'...' if prediction.size > 5}"
-          Crystalball.log :info, "Starting RSpec."
-
-          super(args + prediction, err, out)
+          # Don't actually run the specs, just print the prediction
+          puts prediction.compact
         end
 
         def reset!
