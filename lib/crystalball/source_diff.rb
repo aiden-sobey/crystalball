@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'forwardable'
 require 'crystalball/source_diff/file_diff'
 require 'crystalball/source_diff/formatting_checker'
 
