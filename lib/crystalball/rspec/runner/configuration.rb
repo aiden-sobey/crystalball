@@ -13,7 +13,7 @@ module Crystalball
             'map_expiration_period' => 86_400,
             'repo_path' => Dir.pwd,
             'requires' => [],
-            'diff_from' => 'HEAD',
+            'diff_from' => 'HEAD~1',
             'diff_to' => nil,
             'runner_class_name' => 'Crystalball::RSpec::Runner',
             'prediction_builder_class_name' => 'Crystalball::RSpec::StandardPredictionBuilder',
