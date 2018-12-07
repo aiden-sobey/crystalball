@@ -3,6 +3,9 @@
 Crystalball is a Ruby library which implements [Regression Test Selection mechanism](https://tenderlovemaking.com/2015/02/13/predicting-test-failues.html) originally published by Aaron Patterson.
 Its main purpose is to select a minimal subset of your test suite which should be run to ensure your changes didn't break anything.
 
+The purpose of this fork is to have an instance of crystalball that generates predictions then writes them to file (`tmp/crystal_files.txt`) instead of executing them.
+This is so that the file prediction can be used by a third-party executor like test-boosters.
+
 [![Build Status](https://travis-ci.org/toptal/crystalball.svg?branch=master)](https://travis-ci.org/toptal/crystalball)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c8bfc25a43a1a2ecf964/maintainability)](https://codeclimate.com/github/toptal/crystalball/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c8bfc25a43a1a2ecf964/test_coverage)](https://codeclimate.com/github/toptal/crystalball/test_coverage)
